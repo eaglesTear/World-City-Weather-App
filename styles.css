@@ -1,0 +1,162 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('media/images/backgrounds/vector-backgrounds/k-images-cloud.png');
+    background-size: cover;
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    background-color: #4B595E;
+    color: #8AD0CE;
+    font-weight: 900;
+    padding: 5px;
+    text-shadow: 2px 3px 0px #000;
+}
+
+/* Temperature reading in larger font */
+.temp,
+h1 {
+    font-size: 3.6rem;
+}
+
+/* Card holding all the data collected from API (invisible until data call) */
+.weather-card {
+    background-color: #7F9BA6;
+    border-bottom: 15px solid #0D9DE3;
+    border-top: 15px solid #0D9DE3;
+    box-shadow: 5px 1px 8px #5E7488;
+    opacity: 0;
+    width: 25%;
+}
+
+.weather-card,
+button {
+    padding: 10px;
+}
+
+/* Inline display to shorten the height of card, reducing scrolling */
+.weather-card * {
+    display: inline;
+}
+
+/* Main icon and temp to stand alone */
+.main-weather-icon,
+.temp {
+    display: block;
+}
+
+/* Main weather icon that shows main type of weather (largest icon) */
+.weather-card,
+.main-weather-icon {
+    margin: 20px auto;
+}
+
+.weather-card,
+input,
+button {
+    border-radius: 10px;
+}
+
+/* Class added to weather card via JS. Renders it visible upon fetch request */
+.opaque {
+    opacity: 1;
+    transition: 2s;
+}
+
+/* Main data section inside weather card element */
+.main-info {
+    font-size: 1.2rem;
+}
+
+/* Weather icons (set & displayed dynamically with JS) */
+.main-weather-icon {
+    width: 110px;
+}
+
+.weather-icon,
+.weather-warning-icon {
+    width: 35px;
+}
+
+/* Class keeps warning icon hidden until certain temp is reached (see JS script) */
+.weather-warning-icon-display {
+    display: none;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-info p,
+.flex-container,
+.flex-container span {
+    padding: 0.5rem;
+}
+
+/* Classes applied to background via JS, depending on weather data */
+.cloud {
+    background-image: url('media/images/backgrounds/pexels-alex-conchillos-clouds.jpg');
+}
+
+.snow {
+    background-image: url('media/images/backgrounds/jonatan-pie-snow.jpg');
+    background-position: center;
+}
+
+.clear {
+    background-image: url('media/images/backgrounds/patrick-janser-clear.jpg');
+}
+
+.rain {
+    background-image: url('media/images/backgrounds/pexels-lumn-rain.jpg');
+}
+
+.fog {
+    background-image: url('media/images/backgrounds/pexels-lumn-fog.jpg');
+}
+
+.storm {
+    background-image: url('media/images/backgrounds/jeremy-thomas-storm.jpg');
+}
+
+.mist {
+    background-image: url('media/images/backgrounds/pexels-pixabay-mist.jpg');
+}
+
+/* Styling for user input box and buttons */
+input,
+button {
+    font-family: 'Michroma', sans-serif;
+    margin: 1.5% 1% 0.5% 1%;
+}
+
+input {
+    border: 2px solid #E3E3E3;
+    padding: 4px;
+}
+
+button {
+    background-color: #81C44E;
+    border: 1px solid #F1F1F1;
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: inset 2px 2px 5px #2E4456;
+}
+
+button:hover,
+button:focus,
+input:focus {
+    background-color: #8AD0CE;
+    outline: none;
+}

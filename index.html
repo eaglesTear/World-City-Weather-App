@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en=GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenWeather App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Michroma&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>World City Weather</h1>
+    </header>
+
+    <!-- Enter city name and output data in metric or imperial systems -->
+    <input class="input-value" type="text" name="city" placeholder="Enter City Name">
+    
+    <button class="show-metrics">Get Weather</button>
+    <button class="show-imperials">Imperial Units</button>
+
+    <!-- Weather data card containing all the weather info -->
+    <section class="weather-card">
+
+        <!-- Time inserted via JS -->
+        <h2 class="date-time"></h2><br><br>
+
+        <!-- Main weather data with identifying icons -->
+        <div class="main-info">
+
+            <p class="city"></p>
+            <p class="country"></p>
+            <p class="main-weather"></p>
+            <img class="main-weather-icon" />
+            <p class="desc"></p>
+            <p class="temp"></p>
+
+            <!-- Flex wraps to allow for neat, side-by-side layout for icon and text -->
+            <div class="flex-container">
+                <img class="weather-warning-icon weather-icon weather-warning-icon-display" />
+                <span class="feels-like"></span>
+            </div>
+
+            <div class="flex-container">
+                <img class="weather-icon" src="media/images/svg/010-wind.svg" alt="wind icon" />
+                <span class="wind-speed"></span>
+            </div>
+
+            <div class="flex-container">
+                <img class="weather-icon" src="media/images/svg/011-view.svg" alt="visibility / eye icon" />
+                <span class="visibility"></span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- JS programming with API call -->
+    <script src="script.js"></script>
+
+</body></html>
