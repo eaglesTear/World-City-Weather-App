@@ -32,9 +32,11 @@ function displayCurrentDate() {
 
 // OpenWeatherMap API button. Display metric or imperial units
 showMetricsBtn.addEventListener("click", function () {
+    
+    const apiKey = config.api_key;
 
     // Fetch data request
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${userInputValue.value}&APPID=5aa420dab0c4e27c36e9ff2bfb513815`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${userInputValue.value}&APPID=${apiKey}`)
 
         // Convert data to json
         .then(res => res.json())
